@@ -1,4 +1,5 @@
 # advertiseX-data-engineering
+I have shared with Gitfront:
 ## Purpose
 
 This project aims to provide a scalable data engineering solution for AdvertiseX, a digital advertising technology company. The solution encompasses data ingestion, processing, storage, query performance optimization, error handling, and monitoring, tailored to meet the specific requirements of the digital advertising industry.
