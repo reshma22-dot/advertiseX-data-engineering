@@ -1,23 +1,34 @@
 import json
 import csv
+import avro
 
 def ingest_json_data(json_data):
     # Process and store JSON data accordingly
-    print("Ingesting JSON data:", json_data)
-    # Add your processing logic here
+    try:
+        print("Ingesting JSON data:", json_data)
+        # Add your processing logic here
+    except Exception as e:
+        print("Error ingesting JSON data:", e)
 
 def ingest_csv_data(csv_file):
     # Process and store CSV data accordingly
-    print("Ingesting CSV data from:", csv_file)
-    # Add your processing logic here
-    with open(csv_file, 'r') as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            print(row)
+    try:
+        print("Ingesting CSV data from:", csv_file)
+        # Add your processing logic here
+        with open(csv_file, 'r') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                print(row)
+    except Exception as e:
+        print("Error ingesting CSV data:", e)
 
-def ingest_other_data(other_file):
-    # Add your logic to ingest data from other sources (e.g., XML, text files)
-    pass
+def ingest_avro_data(avro_file):
+    # Process and store Avro data accordingly
+    try:
+        print("Ingesting Avro data from:", avro_file)
+        # Add your processing logic here
+    except Exception as e:
+        print("Error ingesting Avro data:", e)
 
 def main():
     # Example JSON data
@@ -35,10 +46,12 @@ def main():
     # Ingest CSV data
     ingest_csv_data(csv_file)
 
-    # Example file from other source
-    other_file = 'other_data.txt'
-    # Ingest data from other source
-    ingest_other_data(other_file)
+    # Example Avro file
+    avro_file = 'bid_requests.avro'
+    # Ingest Avro data
+    ingest_avro_data(avro_file)
 
 if __name__ == "__main__":
+    main()
+
     main()
